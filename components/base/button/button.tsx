@@ -1,14 +1,13 @@
-import React from "react";
+import React ,{useState} from "react";
 
-export class BaseButton extends React.Component{
-    render(){
-        return (
-            <div className="">
-                <button
-            
-                >{}</button>
-            </div>
-        )
+export const BaseButton: React.FC=()=>{
     
-    }
+    const {} =useState();
+
+    return (
+        <div className="button">
+            <button></button>
+        </div>
+    )
+    
 } 

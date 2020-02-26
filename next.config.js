@@ -10,6 +10,15 @@ module.exports = {
           },
         ],
       })
+      config.module.rules.push({
+        test:/\.scss/,
+        use:[
+          options.defaultLoaders.babel,{
+            loader:'@zeit/next-sass',
+            options:pluginOptions.options,
+          }
+        ],
+      })
   
       return config
     },
