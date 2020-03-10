@@ -5,9 +5,11 @@
 - このライブラリは、NextJS を利用するにあたって、独自に設定したリポジトリである
 
 ## 使用フレームワーク
-- React/NextJS
-- TypeScript
-- Storybook 
+- React/NextJS (Web フレームワーク)
+- emotion (コンポーネントデザイン用) 
+- Storybook (スタイルガイド)
+- ESLint /Prettier (Lint 管理)
+ 
 - CircleCI or GitHub Action (予定)
 
 ## 今後のポイント
