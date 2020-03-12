@@ -20,6 +20,6 @@
       "es6": true
     },
     "rules": {
-      "prettier/prettier": "error",
+      "prettier/prettier": "error"
     }
   }
