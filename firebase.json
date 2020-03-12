@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": ".next/serverless/pages",
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "next"
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "src/**",
+      "**/node_modules/**"
+    ]
+  }
+}
