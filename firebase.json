@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": ".next/serverless/pages",
+    "public": "out",
     "rewrites": [
       {
         "source": "**/**",

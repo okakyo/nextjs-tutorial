@@ -8,7 +8,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": " next build && firebase deploy"
+    "export":"next export",
+    "deploy": "npm run export && firebase deploy"
   },
   "keywords": [],
   "author": "",
