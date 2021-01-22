@@ -1,4 +1,4 @@
-import { Box,Image } from '@chakra-ui/react'
+import { Box} from '@chakra-ui/react'
 import Head from 'next/head'
 import {MainCard} from "@/components/organisms/cards/MainCard";
 
@@ -9,22 +9,12 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main >
-      <MainCard >
-        <div>こんにちは</div>
-       </MainCard>
+       
+            <Box w="100%" h="10" bg="blue.500" p="3"/>
+          
        </main>
-      <footer >
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo"/>
-        </a>
-      </footer>
+     
     </div>
   )
 }

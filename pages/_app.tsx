@@ -1,12 +1,19 @@
 import '../styles/globals.css'
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider, CSSReset, Flex} from "@chakra-ui/react"
 import {TheHeader} from "@/components/organisms/headers/TheHeader";
+import { MainLayout } from '@/components/organisms/layouts/MainLayout';
 function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider>
       <TheHeader/>
-      <Component {...pageProps} />
+      <CSSReset/>
+      <MainLayout>
+        <Component {...pageProps} />
+      </MainLayout>
+      
+      
+
     </ChakraProvider>
   )
 }
