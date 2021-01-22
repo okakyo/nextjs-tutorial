@@ -1,21 +1,33 @@
-import{ FunctionComponent } from "react";
-import { Box, Flex } from "@chakra-ui/react";
+import{ FunctionComponent, useState } from "react";
+import { Box, Button, Flex, Heading, Spacer } from "@chakra-ui/react";
 
 export const TheHeader:FunctionComponent = ()=>{
+    const [isLogin,useIsLogin] = useState(false);
     return (
     <>
         <Flex 
             as="nav" 
             align="center"
             justify="space-between"
-            padding="1.5rem"
+            padding="0.5rem"
             bg="teal.500"
             color="white"
         >
+        <Box p="2">
+            <Heading size="md">Chakra App</Heading>
+        </Box>
+        <Spacer/>
         <Box>
-
-        </Box> 
+            {!isLogin?
+                <Button colorScheme="teal">
+                    Log in
+                </Button>:
+                // この部分は User の Icon を表示させる
+                <Button colorScheme="teal" mr="4">
+                    Log Out
+                </Button>
+            }
+        </Box>
         </Flex>
-        
     </>)
 }

@@ -1,12 +1,14 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import {FC} from "react";
 
 export const MainLayout:FC = ({children})=>{
     
     return (
-        <Box w="100%" p={1} m={3}>
+        <Flex justify="center" p={1}>
+            <Box  w={["100%","80%"]}>
+                {children}
+            </Box>
             
-            {children}
-        </Box>
+        </Flex>
     )
 }
