@@ -1,4 +1,5 @@
 import {Auth} from "./plugin";
 
-export const SigninFunc= Auth;
-export const SignoutFunc = Auth;
+export const SignInWithGoogle= Auth;
+export const SignOut = Auth;
+export const AuthStatus = Auth;

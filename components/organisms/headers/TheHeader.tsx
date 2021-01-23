@@ -1,7 +1,7 @@
-import{ FunctionComponent, useState } from "react";
+import{ FC, useState } from "react";
 import { Box, Button, Flex, Heading, Spacer } from "@chakra-ui/react";
 
-export const TheHeader:FunctionComponent = ()=>{
+export const TheHeader:FC= ()=>{
     const [isLogin,useIsLogin] = useState(false);
     return (
     <>
