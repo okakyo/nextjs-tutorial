@@ -5,7 +5,6 @@ export const UserWindow:FC=()=>{
     return (
         <>
             <MainCard>
-
             </MainCard>
         </>
     );
