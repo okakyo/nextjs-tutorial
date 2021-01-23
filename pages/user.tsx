@@ -1,7 +1,7 @@
 import { Box, Container, Grid, GridItem, SimpleGrid} from '@chakra-ui/react'
 import Head from 'next/head'
-import {MainCard} from "@/components/organisms/cards/MainCard";
-import { MainLayout } from '@/components/organisms/layouts/MainLayout';
+import {MainCard} from "@/components/organisms/cards";
+import { MainLayout } from '@/components/organisms/layouts';
 
 export default function Home() {
   return (

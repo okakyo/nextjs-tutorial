@@ -1,6 +1,5 @@
-import '../styles/globals.css'
 import { Box, ChakraProvider, CSSReset} from "@chakra-ui/react"
-import {TheHeader} from "@/components/organisms/headers/TheHeader";
+import {TheHeader} from "@/components/organisms/headers";
 function MyApp({ Component, pageProps }) {
 
   return (
