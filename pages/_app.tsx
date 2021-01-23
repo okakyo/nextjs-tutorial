@@ -7,12 +7,9 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       <TheHeader/>
       <CSSReset/>
-      <Box w="100%" p="3">
+      <Box  w="100%" p="3" bg="#F5F5F5" h="90vh">
         <Component {...pageProps} />
       </Box>
-      
-      
-
     </ChakraProvider>
   )
 }
