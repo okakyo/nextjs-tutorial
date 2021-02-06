@@ -13,18 +13,18 @@ export default function Home() {
       <main>
         <MainLayout>
           
-          <SimpleGrid columns={[1,2,3]} spacing={10}>
-          { [1, 2, 3, 4, 5,6].map(()=>(
-          <MainCard>サンプル</MainCard>)
+          <SimpleGrid columns={[1,1,2,3,4]} spacing={10}>
+          { [1, 2, 3, 4, 5,6].map((number,key)=>(
+          <MainCard key={key}>
+            サンプル
+          </MainCard>
+          )
           )}
 
         </SimpleGrid>
           
         </MainLayout>
-        <Grid>
-          <GridItem></GridItem>
-          <GridItem></GridItem>
-        </Grid>      
+         
         
         
       </main>

@@ -1,5 +1,28 @@
-import {Auth} from "./plugin";
+import {Auth, GoogleProvider} from "./plugin";
 
-export const SignInWithGoogle= Auth;
-export const SignOut = Auth;
-export const AuthStatus = Auth;
+export const SignInWithGoogle= async ()=>{
+    try {
+        const user = await Auth.signInWithPopup(GoogleProvider);
+        return {
+            status:"ok",
+            data:user
+        }
+    } catch(e){
+        return {
+            status:"error",
+            message:e.message
+
+        }
+    }
+};
+export const SignOut =  async ()=>{
+    try {
+       await Auth.signOut();
+    } catch(e){
+        return {
+            status:"error",
+            message:e.message
+
+        }
+    }
+};

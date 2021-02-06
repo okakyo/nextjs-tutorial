@@ -1,8 +1,10 @@
-import{ FC, useState } from "react";
+import{ FC, useContext } from "react";
 import { Box, Button, Flex, Heading, Spacer } from "@chakra-ui/react";
+import { AuthContext } from "@/store";
 
 export const TheHeader:FC= ()=>{
-    const [isLogin,useIsLogin] = useState(false);
+    const context = useContext(AuthContext);
+    const account = context.account
     return (
     <>
         <Flex 
@@ -18,7 +20,7 @@ export const TheHeader:FC= ()=>{
         </Box>
         <Spacer/>
         <Box>
-            {!isLogin?
+            {!account?
                 <Button colorScheme="teal">
                     Log in
                 </Button>:

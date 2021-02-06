@@ -1,2 +1,2 @@
-export {SigninFunc,SignoutFunc} from "./auth";
+export {SignInWithGoogle,SignOut} from "./auth";
 
