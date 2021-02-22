@@ -7,15 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --fix",
-    "test": "jest"
+    "test": "jest",
+    "storybook": "storybook"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.11",
     "@chakra-ui/react": "^1.1.5",
     "@emotion/react": "^11.1.4",
     "@emotion/styled": "^11.0.0",
     "firebase": "^8.2.4",
     "framer-motion": "^3.2.1",
-    "next": "^9.4.4",
+    "graphql": "^15.5.0",
+    "next": "^10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1"
   },
