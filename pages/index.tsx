@@ -12,7 +12,6 @@ export default function Home() {
       </Head>
       <main>
         <MainLayout>
-          
           <SimpleGrid columns={[1,1,2,3,4]} spacing={10}>
           { [1, 2, 3, 4, 5,6].map((number,key)=>(
           <MainCard key={key}>
@@ -20,13 +19,8 @@ export default function Home() {
           </MainCard>
           )
           )}
-
         </SimpleGrid>
-          
         </MainLayout>
-         
-        
-        
       </main>
      
     </div>
