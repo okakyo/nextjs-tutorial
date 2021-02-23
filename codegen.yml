@@ -1,0 +1,20 @@
+overwrite: true
+schema: "http://api:3000/graphql"
+generates:
+  ./libs/queries/graphql.d.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+      - "typescript-graphql-files-modules"
+      - "typescript-document-nodes"
+      - "fragment-matcher"
+    config:
+     
+      withHOC: false # HOCは要らないので
+      withComponent: false # falseなので出力ファイル拡張子が.tsでもいい。
+      withHooks: true # 上のdocumentsの設定があればこれでhookが自動生成される
+
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
