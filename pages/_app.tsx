@@ -4,6 +4,7 @@ import { AuthProvider } from "@/store/auth";
 import {ApolloProvider} from "@apollo/client";
 import { client } from "@/libs/queries";
 import { gql, useQuery } from "@apollo/client";
+import { MainLayout } from "@/components/organisms/layouts";
 
 
 function MyApp({ Component, pageProps }) {
@@ -15,9 +16,11 @@ function MyApp({ Component, pageProps }) {
         <ApolloProvider client={client}>
           <AuthProvider>
             <TheHeader/>
-              <Box  w="100%" p="3" bg="#F5F5F5" h="90vh">
+            <main>
+              <MainLayout>
                 <Component {...pageProps} />
-              </Box>
+              </MainLayout>
+            </main>
           </AuthProvider>
         </ApolloProvider>
     </ChakraProvider>

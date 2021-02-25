@@ -3,7 +3,6 @@ import Firebase from "firebase/app";
 import "firebase/auth";
 
 
-console.log(process.env)
 
 const FirebaseConfig = {
     apiKey: "AIzaSyAXhRANrE1YLJ0FcIxRiFx5gD8npTs27Qc",

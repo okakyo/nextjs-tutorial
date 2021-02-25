@@ -4,3 +4,8 @@ export default (req:Request, res:any) => {
   res.statusCode = 200
   res.json({ name: 'John Doe' })
 }
+
+// 
+export const findOneUserCache =(req:Request,res:Response)=>{
+  
+}

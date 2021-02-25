@@ -10,25 +10,11 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <MainLayout>
-          
           <SimpleGrid columns={[1,2,3,4]} spacing={10}>
-          { [1, 2, 3, 4, 5,6].map(()=>(
-          <MainCard>サンプル</MainCard>)
+          { [1, 2, 3, 4, 5,6].map((number,index)=>(
+          <MainCard key={index}>サンプル</MainCard>)
           )}
-
         </SimpleGrid>
-          
-        </MainLayout>
-        <Grid>
-          <GridItem></GridItem>
-          <GridItem></GridItem>
-        </Grid>      
-        
-        
-      </main>
-     
     </div>
   )
 }
