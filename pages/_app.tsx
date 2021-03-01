@@ -4,18 +4,15 @@ import {ApolloProvider} from "@apollo/client";
 import { client } from "@/libs/queries";
 import { MainLayout } from "@/components/organisms/layouts";
 import  "./global.style.css";
-import { useEffect } from "react";
-import { useFetchUser, UserProvider } from "@/libs";
+
 
 function MyApp({ Component, pageProps,router }) {
   
   // Todo : ここでログインしているかどうかのチェックを行う
-  const {user,loading} = useFetchUser()
   
   return (
       <ChakraProvider>
         <CSSReset/>
-        <UserProvider value={{user,loading}}>
           <ApolloProvider client={client}>
             <TheHeader/>
             <main >
@@ -25,7 +22,6 @@ function MyApp({ Component, pageProps,router }) {
 
             </main>
         </ApolloProvider>
-        </UserProvider>
         
     </ChakraProvider>
   )
