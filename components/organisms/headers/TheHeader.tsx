@@ -1,10 +1,7 @@
-import{ FC, useContext } from "react";
+import{ VFC } from "react";
 import { Box, Button, Flex, Heading, Spacer } from "@chakra-ui/react";
-import { AuthContext } from "@/store";
-
-export const TheHeader:FC= ()=>{
-    const context = useContext(AuthContext);
-    const account = context.account
+import NextLink from 'next/link';
+export const TheHeader:VFC= ()=>{
     return (
     <>
         <Flex 
@@ -16,19 +13,18 @@ export const TheHeader:FC= ()=>{
             color="white"
         >
         <Box p="2">
-            <Heading size="md">Chakra App</Heading>
+            <Heading size="md">
+                <NextLink href="/">
+                    Chakra App
+                </NextLink>
+        </Heading>
         </Box>
         <Spacer/>
         <Box>
-            {!account?
-                <Button colorScheme="teal">
-                    Log in
-                </Button>:
-                // この部分は User の Icon を表示させる
-                <Button colorScheme="teal" mr="4">
-                    Log Out
-                </Button>
-            }
+            <NextLink href="/api/login">
+                Log in
+            </NextLink>
+               
         </Box>
         </Flex>
     </>)

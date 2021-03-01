@@ -1,30 +1,33 @@
-import { Box, ChakraProvider, CSSReset} from "@chakra-ui/react"
+import {ChakraProvider, CSSReset} from "@chakra-ui/react"
 import {TheHeader} from "@/components/organisms/headers";
-import { AuthProvider } from "@/store/auth";
 import {ApolloProvider} from "@apollo/client";
 import { client } from "@/libs/queries";
-import { gql, useQuery } from "@apollo/client";
 import { MainLayout } from "@/components/organisms/layouts";
+import  "./global.style.css";
+import { useEffect } from "react";
+import { useFetchUser, UserProvider } from "@/libs";
 
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps,router }) {
   
   // Todo : ここでログインしているかどうかのチェックを行う
+  const {user,loading} = useFetchUser()
+  
   return (
       <ChakraProvider>
         <CSSReset/>
-        <ApolloProvider client={client}>
-          <AuthProvider>
+        <UserProvider value={{user,loading}}>
+          <ApolloProvider client={client}>
             <TheHeader/>
-            <main>
+            <main >
               <MainLayout>
                 <Component {...pageProps} />
               </MainLayout>
+
             </main>
-          </AuthProvider>
         </ApolloProvider>
+        </UserProvider>
+        
     </ChakraProvider>
-    
   )
 }
 

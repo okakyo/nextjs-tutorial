@@ -1,6 +1,7 @@
 import {initAuth}from "../../libs"
 
 export default async  (req,res) =>{
+    
     try {
         await initAuth.handleLogin(req,res)
     } catch(e){
