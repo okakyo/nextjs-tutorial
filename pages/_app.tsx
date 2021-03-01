@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps,router }) {
   return (
       <ChakraProvider>
         <CSSReset/>
-        <UserProvider value={user,loading}>
+        <UserProvider value={{user,loading}}>
           <ApolloProvider client={client}>
             <TheHeader/>
             <main >
