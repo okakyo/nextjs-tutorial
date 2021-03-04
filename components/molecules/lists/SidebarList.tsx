@@ -1,10 +1,13 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Link } from "@chakra-ui/react";
 import { VoidFunctionComponent } from "react";
 import NextLink from "next/link"
-
+import { useRouter } from "next/router";
 
 export const SidebarList:VoidFunctionComponent =()=>{
-    const router = [
+    const router = useRouter();
+    
+
+    const sidebarLinks = [
     {   
         to:"/",
         name:"ホーム",
@@ -28,22 +31,37 @@ export const SidebarList:VoidFunctionComponent =()=>{
             position="sticky"
             p={3}
             bg="#ffffff"
-            width={["0","0","30%","25%","20%"]}
+            width={["0","0","25%","20%","15%"]}
             height="90vh"
           >
             <Box
               top={3}
               position="sticky"
               >
-                { router.map((router,key)=>(
-                <NextLink  href={router.to} passHref key={key}>
-                    <Box _hover={{bg:"#f2f2f2"}} _active={{bg:"blue" }} key={key} rounded="sm" maxW="sm" p="3" my={2}>
-                        {router.name}
+                { sidebarLinks.map((sidebar,key)=>(
+                <NextLink   href={sidebar.to}  key={key} passHref>
+                    <Box  
+                        key={key}  
+                        rounded="md" 
+                        maxW="sm" p="3"
+                        my={2} 
+                        fontWeight={
+                            router.pathname ===sidebar.to&&"semibold"
+                        }
+                        color={
+                            router.pathname===sidebar.to&&"teal.600"
+                        }
+                        bg={
+                            router.pathname===sidebar.to&&'green.100'
+                        }
+                    >
+                     {sidebar.name}
                     </Box>
+                    
                 </NextLink>
                   ))}
-            </Box>
-          </Box>
-        </>
+                  </Box>
+                  </Box>
+                </>
     )
 }

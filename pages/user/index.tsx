@@ -1,20 +1,42 @@
-import { Box, Container, Grid, GridItem, SimpleGrid} from '@chakra-ui/react'
+import { Box, Image,Flex,Heading,Text,Button,Avatar, Grid, GridItem, Spacer, Stack} from '@chakra-ui/react'
 import Head from 'next/head'
-import {MainCard} from "@/components/organisms/cards";
-import { MainLayout } from '@/components/organisms/layouts';
-
-export default function Home() {
+import {gql,useQuery} from "@apollo/client";
+import {client } from "@/libs/queries/apollo";
+import { UserWindow } from '@/components/templates/user';
+export default function UserTopPage({userData}) {
+  const user= userData.user
   return (
-    <div >
+    <>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-          <SimpleGrid columns={[1,2,3,4]} spacing={10}>
-          { [1, 2, 3, 4, 5,6].map((number,index)=>(
-          <MainCard key={index}>サンプル</MainCard>)
-          )}
-        </SimpleGrid>
-    </div>
+      <UserWindow user={user}/>
+         
+    </>
   )
 }
+
+export const  getStaticProps= async ()=>{
+
+  const getQuery = {query:gql`
+    {
+        user(email:"0622okakyo@gmail.com"){
+            id
+            name
+            email
+            introduction
+        }
+    }
+  `}
+
+  const {data} = await client.query(getQuery);
+  return {
+    props:{
+      userData:data
+    }
+  }
+  
+}
+
+

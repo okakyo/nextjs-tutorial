@@ -1,8 +1,9 @@
-import {ApolloClient,InMemoryCache,HttpLink} from "@apollo/client";
-import { window } from "@ungap/global-this";
-import { useMemo } from "react";
+import {ApolloClient,InMemoryCache} from "@apollo/client";
 
 export const client=new ApolloClient({
-        uri:"http://localhost:3000/graphql",
-        cache: new InMemoryCache()
-    })
+    ssrMode: typeof window === "undefined",
+    uri:"http://api:3000/graphql",
+    credentials: 'same-origin',
+    
+    cache: new InMemoryCache()
+})

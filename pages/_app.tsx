@@ -3,19 +3,15 @@ import {TheHeader} from "@/components/organisms/headers";
 import {ApolloProvider} from "@apollo/client";
 import { client } from "@/libs/queries";
 import { MainLayout } from "@/components/organisms/layouts";
-import  "./global.style.css";
-import { useEffect } from "react";
-import { useFetchUser, UserProvider } from "@/libs";
+import {AuthProvider} from "@/libs"
 
 function MyApp({ Component, pageProps,router }) {
   
-  // Todo : ここでログインしているかどうかのチェックを行う
-  const {user,loading} = useFetchUser()
   
   return (
       <ChakraProvider>
         <CSSReset/>
-        <UserProvider value={{user,loading}}>
+        <AuthProvider>
           <ApolloProvider client={client}>
             <TheHeader/>
             <main >
@@ -25,8 +21,7 @@ function MyApp({ Component, pageProps,router }) {
 
             </main>
         </ApolloProvider>
-        </UserProvider>
-        
+        </AuthProvider>
     </ChakraProvider>
   )
 }

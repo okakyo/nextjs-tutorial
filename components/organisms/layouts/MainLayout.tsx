@@ -1,9 +1,7 @@
-import { Box, Container, Flex, LinkBox, LinkOverlay } from "@chakra-ui/react";
+import { Container, Flex } from "@chakra-ui/react";
 import {FC} from "react";
 import {SidebarList} from "@/components/molecules/lists/SidebarList"
-import { getSession } from "@auth0/nextjs-auth0";
 export const MainLayout:FC = ({children})=>{
-    
     
     return (
         <Flex
@@ -16,9 +14,9 @@ export const MainLayout:FC = ({children})=>{
           <Container 
             height="90vh"
             p={3} 
-            maxW="container.xl"
+            maxW="container.lg"
           >
-            {children}
+              {children}
         </Container>
         </Flex>
     )

@@ -5,7 +5,3 @@ export default (req:Request, res:any) => {
   res.json({ name: 'John Doe' })
 }
 
-// 
-export const findOneUserCache =(req:Request,res:Response)=>{
-  
-}
