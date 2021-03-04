@@ -1,6 +1,16 @@
 import { Avatar, Box, Button, Heading, Spacer, Stack,Text } from "@chakra-ui/react";
 import {FC} from "react";
-export const UserWindow:FC=({user}:any)=>{
+
+interface UserProps {
+    user:{
+        id:string|number
+        name?:string,
+        email?:string
+        introduction?:string
+    }
+}
+
+export const UserWindow:FC<UserProps>=({user})=>{
 
     return (
         <>
