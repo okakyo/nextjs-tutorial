@@ -9,7 +9,7 @@ export const SidebarList:VoidFunctionComponent =()=>{
 
     const sidebarLinks = [
     {   
-        to:"/",
+        to:"/home",
         name:"ホーム",
         icon:"home"
     },
@@ -18,7 +18,7 @@ export const SidebarList:VoidFunctionComponent =()=>{
         name:"タスク",
         icon:"dictionary"
     },{
-        to:"/user",
+        to:"/users",
         name:"アカウント",
         icon:"account"
 

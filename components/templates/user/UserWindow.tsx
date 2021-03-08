@@ -21,7 +21,7 @@ export const UserWindow:FC<UserProps>=({user})=>{
             <Avatar ml={5} size="xl" justify={"center"}/>
 
             <Box pl={5} pt={1}  ml={5}  width="100%">
-              <Heading size='lg' fontFamily="bold">
+              <Heading size='md' fontFamily="bold">
                 {user.name}
               </Heading>
               <Text width="60%" p={2}>

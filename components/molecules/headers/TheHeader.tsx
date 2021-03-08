@@ -21,7 +21,7 @@ export const TheHeader:VFC= ()=>{
         >
         <Box p={2}>
             <Heading size="md">
-                <NextLink href="/">
+                <NextLink href="/home">
                     Chakra App
                 </NextLink>
             </Heading>

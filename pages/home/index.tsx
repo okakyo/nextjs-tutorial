@@ -2,9 +2,7 @@ import { Box, Container, LinkBox, LinkOverlay, List, ListItem, SimpleGrid} from 
 import Head from 'next/head'
 import {MainCard} from "@/components/organisms/cards";
 
-
-// TODO : ここをLPにする
-export default function TopPage() {
+export default function HomePage() {
   return (
     <div >
       <Head>

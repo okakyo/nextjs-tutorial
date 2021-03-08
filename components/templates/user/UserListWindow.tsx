@@ -1,4 +1,5 @@
 import { gql,useQuery } from "@apollo/client";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import {FC} from "react";
 
 
@@ -8,14 +9,13 @@ export const UserListWindow:FC=({data}:any)=>{
     
     return (
         <>
-        <div>
-            <div>結果表示</div>
-            <div>
-                Done
-            </div>
-        </div>
-
-        
+        <Box>
+            <SimpleGrid>
+                <Box>
+                    
+                </Box>
+            </SimpleGrid>
+        </Box>
         </>
     );
 }

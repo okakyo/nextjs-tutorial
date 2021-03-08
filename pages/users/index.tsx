@@ -17,7 +17,7 @@ export default function UserTopPage({userData}) {
   )
 }
 
-export const  getStaticProps= async ()=>{
+export const  getServerSideProps= async ()=>{
 
   const getQuery = {query:gql`
     {
