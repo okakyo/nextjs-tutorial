@@ -26,6 +26,6 @@ WORKDIR /usr/src/app
 COPY --from=build /app/node_modules ./
 COPY --from=build /app/package*.json ./
 COPY --from=build /app/tsconfig*.json ./
-COPY --from=build /app/.next ./.next
+COPY --from=build /app/.next/ ./.next
 
 CMD [ "npm", "run", "start" ]
