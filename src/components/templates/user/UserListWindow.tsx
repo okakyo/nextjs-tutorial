@@ -1,4 +1,3 @@
-import { gql,useQuery } from "@apollo/client";
 import { Box, SimpleGrid } from "@chakra-ui/react";
 import {FC} from "react";
 

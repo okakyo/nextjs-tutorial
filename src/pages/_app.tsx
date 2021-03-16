@@ -4,10 +4,7 @@ import {ApolloProvider} from "@apollo/client";
 import { client } from "@/libs/queries";
 import { MainLayout } from "@/components/organisms/layouts";
 import {AuthProvider} from "@/libs"
-
-function MyApp({ Component, pageProps,router }) {
-  
-  
+function MyApp({ Component, pageProps}) {
   return (
       <ChakraProvider>
         <CSSReset/>

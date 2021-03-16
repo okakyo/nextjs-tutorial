@@ -2,6 +2,7 @@ import { Box, Link } from "@chakra-ui/react";
 import { VoidFunctionComponent } from "react";
 import NextLink from "next/link"
 import { useRouter } from "next/router";
+import { background } from "@chakra-ui/styled-system";
 
 export const SidebarList:VoidFunctionComponent =()=>{
     const router = useRouter();
@@ -49,11 +50,15 @@ export const SidebarList:VoidFunctionComponent =()=>{
                             router.pathname ===sidebar.to&&"semibold"
                         }
                         color={
-                            router.pathname===sidebar.to&&"teal.600"
+                            router.pathname===sidebar.to&&"teal.400"
                         }
                         bg={
-                            router.pathname===sidebar.to&&'green.100'
+                            router.pathname===sidebar.to&&"green.50"
                         }
+                        _hover ={{
+                            backgroundColor:"green.100"
+                        }}  
+                        
                     >
                      {sidebar.name}
                     </Box>
