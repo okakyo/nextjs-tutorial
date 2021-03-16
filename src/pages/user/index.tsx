@@ -1,4 +1,6 @@
+import React from "react"
 import Head from 'next/head'
+
 export default function UserTopPage() {
 
   return (
@@ -8,7 +10,7 @@ export default function UserTopPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        hello World
+        Hello World
       </div>
     </>
   )
