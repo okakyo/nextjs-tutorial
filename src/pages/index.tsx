@@ -14,7 +14,7 @@ export default function TopPage() {
           <SimpleGrid columns={[1,1,2,3,4]} spacing={10}>
           { [1, 2, 3, 4, 5,6,4,5,5,5,5,5,5,5].map((number,key)=>(
           <MainCard key={key}>
-            サンプル kakunin 
+            サンプル カード
           </MainCard>
           ))}
         </SimpleGrid>
