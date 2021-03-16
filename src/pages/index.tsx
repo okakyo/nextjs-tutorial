@@ -1,4 +1,4 @@
-import { Box, Container, LinkBox, LinkOverlay, List, ListItem, SimpleGrid} from "@chakra-ui/react"
+import {  SimpleGrid} from "@chakra-ui/react"
 import Head from 'next/head'
 import {MainCard} from "@/components/organisms/cards";
 
