@@ -1,8 +1,7 @@
-import { Box, Link } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { VoidFunctionComponent } from "react";
 import NextLink from "next/link"
 import { useRouter } from "next/router";
-import { background } from "@chakra-ui/styled-system";
 
 export const SidebarList:VoidFunctionComponent =()=>{
     const router = useRouter();
@@ -15,7 +14,7 @@ export const SidebarList:VoidFunctionComponent =()=>{
         icon:"home"
     },
     {
-        to:"/tasks",
+        to:"/user/tasks",
         name:"タスク",
         icon:"dictionary"
     },{
