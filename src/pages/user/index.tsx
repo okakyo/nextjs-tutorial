@@ -8,7 +8,7 @@ export default function UserTopPage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        hello 
+        hello World
       </div>
     </>
   )
