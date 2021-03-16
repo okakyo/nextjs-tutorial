@@ -1,4 +1,3 @@
-import { Box, Image,Flex,Heading,Text,Button,Avatar, Grid, GridItem, Spacer, Stack} from '@chakra-ui/react'
 import Head from 'next/head'
 export default function UserTopPage() {
 
