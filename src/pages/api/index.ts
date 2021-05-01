@@ -5,3 +5,4 @@ export default (req:Request, res:any) => {
   res.json({ name: 'John Doe' })
 }
 
+

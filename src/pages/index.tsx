@@ -1,4 +1,4 @@
-import {  SimpleGrid} from "@chakra-ui/react"
+import { SimpleGrid} from "@chakra-ui/react"
 import Head from 'next/head'
 import {MainCard} from "@/components/organisms/cards";
 
@@ -6,18 +6,19 @@ import {MainCard} from "@/components/organisms/cards";
 // TODO : ここをLPにする
 export default function TopPage() {
   return (
-    <div >
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-          <SimpleGrid columns={[1,1,2,3,4]} spacing={10}>
-          { [1, 2, 3, 4, 5,6,4,5,5,5,5,5,5,5].map((number,key)=>(
-          <MainCard key={key}>
-            サンプル カード
-          </MainCard>
-          ))}
-        </SimpleGrid>
+      <SimpleGrid columns={[1,1,2,3,4]} spacing={10}>
+          
+        <MainCard>
+          サンプル カード
+        </MainCard>
+
+      </SimpleGrid>
     </div>
   )
 }
+

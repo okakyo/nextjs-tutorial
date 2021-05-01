@@ -7,36 +7,37 @@ import { SignIn,AuthContext, Signout } from "@/libs";
 
 export const TheHeader:VFC= ()=>{
     const state = useContext(AuthContext)
-    const currentUser =state.currentUser;
+    const {currentUser} = state;
 
     return (
-    <>
+      <>
         <Flex 
-            as="nav" 
-            align="center"
-            justify="space-between"
-            padding="0.5rem"
-            bg="teal.400"
-            color="white"
-        >
-        <Box p={2}>
+          as="nav" 
+          align="center"
+          justify="space-between"
+          padding="0.5rem"
+          bg="teal.400"
+          color="white">
+          <Box p={2}>
             <Heading size="md">
-                <NextLink href="/home">
-                    Chakra App
-                </NextLink>
+              <NextLink href="/">
+                Chakra App
+              </NextLink>
             </Heading>
-        </Box>
-        <Spacer/>
-        <Box p={2}>
-            {currentUser?
-            <Button bgColor="teal.400" onClick={()=>Signout()}>
+          </Box>
+          <Spacer />
+          <Box p={2}>
+            {currentUser? (
+              <Button bgColor="teal.400" onClick={()=>Signout()}>
                 Log Out
-            </Button>:
+              </Button>
+          ): (
             <Button bgColor="teal.400" onClick={()=>SignIn()}>
-                Log In
+              Log In
             </Button>
-            }
-        </Box>
+          )}
+          </Box>
         </Flex>
-    </>)
+      </>
+)
 }

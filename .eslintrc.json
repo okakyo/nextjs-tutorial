@@ -33,7 +33,7 @@
         "react/jsx-closing-bracket-location": [
         "error",
         { "selfClosing": "tag-aligned",
-          "nonEmpty": "after-props" 
+          "nonEmpty": "after-props"
         }
         ],
         "react/jsx-one-expression-per-line": 0,
@@ -41,6 +41,8 @@
             "off", 
             { "caseSensitive": true }
         ],
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "import/prefer-default-export":"off",
+        "react/prop-types":"off"
     }
 }
